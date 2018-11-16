@@ -3,69 +3,13 @@
       <!-- Interfaz web -->
       <div class="col-12 d-none d-md-block mt-3">
         <div class="col-12">
-          <div class="pokemonsContainer">
-            <div class="pokemon-container">
+          <div class="pokemonsContainer" >
+            <div class="pokemon-container" *ngFor="let pokemon of pokemons; let i = index">
               <div class="pokemon-body">
-                <img class="responsive-image" src="../assets/img/agumon.png" alt="">
+                <img class="responsive-image" src="{{ pokemon.image_url }}" alt="Imagen Pokemon {{ pokemon.name }}" (click)="verPokemon(i);">
               </div>
               <div class="pokemon-footer">
-                Agumón
-              </div>
-            </div>
-            <div class="pokemon-container">
-              <div class="pokemon-body">
-                <img src="../assets/img/agumon.png" alt="">
-              </div>
-              <div class="pokemon-footer">
-                Agumón
-              </div>
-            </div>
-            <div class="pokemon-container">
-              <div class="pokemon-body">
-                <img src="../assets/img/agumon.png" alt="">
-              </div>
-              <div class="pokemon-footer">
-                Agumón
-              </div>
-            </div>
-            <div class="pokemon-container">
-              <div class="pokemon-body">
-                <img src="../assets/img/agumon.png" alt="">
-              </div>
-              <div class="pokemon-footer">
-                Agumón
-              </div>
-            </div>
-            <div class="pokemon-container">
-              <div class="pokemon-body">
-                <img src="../assets/img/agumon.png" alt="">
-              </div>
-              <div class="pokemon-footer">
-                Agumón
-              </div>
-            </div>
-            <div class="pokemon-container">
-              <div class="pokemon-body">
-                <img src="../assets/img/agumon.png" alt="">
-              </div>
-              <div class="pokemon-footer">
-                Agumón
-              </div>
-            </div>
-            <div class="pokemon-container">
-              <div class="pokemon-body">
-                <img src="../assets/img/agumon.png" alt="">
-              </div>
-              <div class="pokemon-footer">
-                Agumón
-              </div>
-            </div>
-            <div class="pokemon-container">
-              <div class="pokemon-body">
-                <img src="../assets/img/agumon.png" alt="">
-              </div>
-              <div class="pokemon-footer">
-                Agumón
+                {{ pokemon.name }}
               </div>
             </div>
           </div> 
@@ -86,68 +30,12 @@
             <div class="row">
               <div class="col-12">
                 <div class="pokemonsContainer">
-                  <div class="pokemon-container">
+                  <div class="pokemon-container" *ngFor="let pokemon of pokemons; let i = index">
                     <div class="pokemon-body">
-                      <img class="responsive-image" src="../assets/img/agumon.png" alt="">
+                      <img class="responsive-image" src="{{ pokemon.image_url }}" alt="Imagen Pokemon {{ pokemon.name }}" (click)="verPokemon(i);">
                     </div>
                     <div class="pokemon-footer">
-                      Agumón
-                    </div>
-                  </div>
-                  <div class="pokemon-container">
-                    <div class="pokemon-body">
-                      <img src="../assets/img/agumon.png" alt="">
-                    </div>
-                    <div class="pokemon-footer">
-                      Agumón
-                    </div>
-                  </div>
-                  <div class="pokemon-container">
-                    <div class="pokemon-body">
-                      <img src="../assets/img/agumon.png" alt="">
-                    </div>
-                    <div class="pokemon-footer">
-                      Agumón
-                    </div>
-                  </div>
-                  <div class="pokemon-container">
-                    <div class="pokemon-body">
-                      <img src="../assets/img/agumon.png" alt="">
-                    </div>
-                    <div class="pokemon-footer">
-                      Agumón
-                    </div>
-                  </div>
-                  <div class="pokemon-container">
-                    <div class="pokemon-body">
-                      <img src="../assets/img/agumon.png" alt="">
-                    </div>
-                    <div class="pokemon-footer">
-                      Agumón
-                    </div>
-                  </div>
-                  <div class="pokemon-container">
-                    <div class="pokemon-body">
-                      <img src="../assets/img/agumon.png" alt="">
-                    </div>
-                    <div class="pokemon-footer">
-                      Agumón
-                    </div>
-                  </div>
-                  <div class="pokemon-container">
-                    <div class="pokemon-body">
-                      <img src="../assets/img/agumon.png" alt="">
-                    </div>
-                    <div class="pokemon-footer">
-                      Agumón
-                    </div>
-                  </div>
-                  <div class="pokemon-container">
-                    <div class="pokemon-body">
-                      <img src="../assets/img/agumon.png" alt="">
-                    </div>
-                    <div class="pokemon-footer">
-                      Agumón
+                      {{ pokemon.name }}
                     </div>
                   </div>
                 </div> 

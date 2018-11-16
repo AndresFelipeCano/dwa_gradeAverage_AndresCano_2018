@@ -7,19 +7,35 @@ import { UiModule } from './ui/ui.module';
 // Component imports
 import { AppComponent } from './app.component';
 import { PokemainComponent } from './components/pokemain/pokemain.component';
+import { LayoutComponent } from './ui/layout/layout.component';
 
 // Routing imports
 import { RouterModule, Routes } from '@angular/router';
 
 
+const routes: Routes = [
+  {
+    path:'',
+    component: LayoutComponent,
+    data: { title: 'Pokemon List' }
+  },
+  {
+    path:'pokemon/:ident',
+    component: PokemainComponent,
+    data: { title: 'Pokemon Detail' }
+  }
+];
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    PokemainComponent
+    PokemainComponent,
   ],
   imports: [
     BrowserModule,
-    UiModule
+    UiModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
